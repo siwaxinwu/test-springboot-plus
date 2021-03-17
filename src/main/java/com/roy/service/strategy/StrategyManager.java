@@ -30,4 +30,8 @@ public class StrategyManager implements ApplicationListener<ContextRefreshedEven
           map.put(bizType, (PushStrategy) value);
         });
   }
+
+  public void push(String code, String applyNo){
+  	map.get(code).push(applyNo);
+  }
 }

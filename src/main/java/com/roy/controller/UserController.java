@@ -44,9 +44,9 @@ public class UserController implements BeanFactoryAware {
   }
 
   @RequestMapping("/test1")
-  public Integer test1() {
+  public Boolean test1() {
     PushStrategy pushStrategy = map.get("addPackageStrategy");
-    return pushStrategy.support();
+    return pushStrategy.support("");
   }
 
   @RequestMapping("/save")

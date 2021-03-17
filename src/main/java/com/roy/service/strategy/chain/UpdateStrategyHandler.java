@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * @version 1.0
  * @date created in 7:56 2021-03-02
  */
-@Service("update")
+//@Service("update")
 public class UpdateStrategyHandler extends StrategyHandler {
   @Override
   public void push(String code) {

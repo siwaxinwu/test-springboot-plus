@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * @version 1.0
  * @date created in 7:52 2021-03-02
  */
-@Service("add")
+//@Service("add")
 public class AddPackageStrategy extends StrategyHandler {
 
   @Override

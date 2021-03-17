@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * @version 1.0
  * @date created in 7:59 2021-03-02
  */
-@Service("close")
+//@Service("close")
 public class CloseStrategyHandler extends StrategyHandler {
   @Override
   public void push(String code) {
