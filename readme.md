@@ -10,3 +10,6 @@
 com.roy.configuration.CurrentUserNameHandlerMethodArgumentResolver
 com.roy.configuration.IPAddressArgumentResolver
 自定义参数解析器演示demo---------------------------com.roy.controller.VOTestController
+
+
+#演示springboot项目的初始化  -------------------------com.roy.configuration.CommandLineAppStartupRunner
