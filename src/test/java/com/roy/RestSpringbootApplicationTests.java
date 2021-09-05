@@ -6,6 +6,7 @@ import cn.smallbun.screw.core.engine.EngineFileType;
 import cn.smallbun.screw.core.engine.EngineTemplateType;
 import cn.smallbun.screw.core.execute.DocumentationExecute;
 import cn.smallbun.screw.core.process.ProcessConfig;
+import com.roy.service.listen.OrderService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,6 +21,10 @@ import java.util.List;
 class RestSpringbootApplicationTests {
 
   @Autowired ApplicationContext applicationContext;
+
+  @Autowired
+  OrderService orderService;
+
 
   @Test
   void contextLoads() {
@@ -80,8 +85,11 @@ class RestSpringbootApplicationTests {
         .build();
   }
 
+  /**
+   * 演示springboot监听事件
+   */
   @Test
-  public void test22() {
-    System.out.println(2);
+  public void testOrderService() {
+    orderService.saveOrder();
   }
 }

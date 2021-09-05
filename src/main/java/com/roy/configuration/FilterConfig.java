@@ -21,29 +21,10 @@ import java.util.List;
  * @history:
  */
 @Configuration
-@EnableWebMvc
-public class WebConfig implements WebMvcConfigurer {
-
-  @Autowired private FangshuaInterceptor interceptor;
-
-  @Override
-  public void addInterceptors(InterceptorRegistry registry) {
-    registry.addInterceptor(interceptor);
-  }
-
-  @Override
-  public void addFormatters(FormatterRegistry registry) {
-    registry.addConverter(new DateConverter());
-  }
-
-	@Override
-	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
-		resolvers.add(new IPAddressArgumentResolver());
-		resolvers.add(new CurrentUserNameHandlerMethodArgumentResolver());
-	}
+public class FilterConfig {
 
     @Bean
-    public FilterRegistrationBean registFilter() {
+    public FilterRegistrationBean registFilter1() {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(new LogCostFilter());
         registration.addUrlPatterns("/*");

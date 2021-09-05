@@ -1,5 +1,6 @@
 package com.roy.interceptor;
 
+import com.alibaba.fastjson.JSON;
 import com.roy.annotation.AccessLimit;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
@@ -7,6 +8,8 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author dingyawu

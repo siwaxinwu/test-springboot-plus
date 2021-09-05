@@ -2,6 +2,7 @@ package com.roy.controller;
 
 import com.roy.service.UserService;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user1")
 @RestController
 public class UserController1 implements ApplicationContextAware {
-
+	@Autowired
   private ApplicationContext applicationContext;
 
   /**

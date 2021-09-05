@@ -17,7 +17,12 @@ import org.springframework.stereotype.Component;
 public class CommandLineAppStartupRunner implements CommandLineRunner {
 
 	@Override
-	public void run(String...args) throws Exception {
-		log.info("Increment counter");
+	public void run(String...args)  {
+		new Thread(){
+			@Override
+			public void run() {
+				log.info("CommandLineRunner的实现类的run方法打印出来的");
+			}
+		}.start();
 	}
 }
