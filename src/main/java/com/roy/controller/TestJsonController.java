@@ -1,8 +1,7 @@
 package com.roy.controller;
 
 import com.roy.entity.Student;
-import com.roy.logging.TimeLog;
-import com.roy.service.MyJsonService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,15 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestJsonController {
 
-  @Autowired
-  MyJsonService myJsonService;
+//  @Autowired
+//  MyJsonService myJsonService;
 
   @RequestMapping("/test")
   public String test() {
-    Student student = new Student();
-    student.setAge("20");
-    student.setName("roy");
-    String myJson = myJsonService.objectToMyJson(student);
-    return myJson;
+//    Student student = new Student();
+//    student.setAge("20");
+//    student.setName("roy");
+//    String myJson = myJsonService.objectToMyJson(student);
+//    return myJson;
+    return "ok";
   }
 }

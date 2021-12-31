@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ScheduledTask {
 
-    @Scheduled(cron = "0/1 * * * * ?")
+    //@Scheduled(cron = "0/1 * * * * ?")
     @Async("asyncTaskExecutor")
     public void scheduledTask1() throws InterruptedException {
         System.out.println(Thread.currentThread().getName() + "---scheduledTask1 " + System.currentTimeMillis());
@@ -22,7 +22,7 @@ public class ScheduledTask {
         }*/
     }
 
-    @Scheduled(cron = "0/1 * * * * ?")
+    //@Scheduled(cron = "0/1 * * * * ?")
     @Async("asyncTaskExecutor")
     public void scheduledTask2() {
         System.out.println(Thread.currentThread().getName() + "---scheduledTask2 " + System.currentTimeMillis());

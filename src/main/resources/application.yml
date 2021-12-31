@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 8080
 #  context-path: /web
 time:
   log:
@@ -8,3 +8,27 @@ nobody:
   json:
     prefix-name: start
     suffix-name: end
+susan:
+  test:
+    userName: zhangsan11
+    list: 10,11,12,18
+    set: 10,11,12,17
+spring:
+  banner:
+    image:
+      location: WX20211110.png
+      height: 20
+      width: 50
+  redis:
+    host: 192.168.1.174
+    port: 6380
+    password: jredis123456
+    cache:
+      type: caffeine
+      cache-names: userCache
+      caffeine:
+        spec: maximumSize=1024,refreshAfterWrite=60s
+
+    #autoconfigure:
+    #可以怕除掉spring的某个类的自动装配
+    #exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
